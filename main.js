@@ -15,6 +15,10 @@ fakeImg.forEach((el) => {
 });
 
 document.querySelector("#app").innerHTML = `
-  <h1>Hello there, you beautiful people !</h1>
+  <h1>Hello there, this is something that works for sure  !</h1>
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+
+
+  <h2>Hello there, this is something that works for sure  !</h2>
+  <h3>Hello there, this is something that works for sure  !</h3>
+  `;
