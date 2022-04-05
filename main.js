@@ -22,9 +22,6 @@ document.querySelector("#app").innerHTML = `
   <h2>Hello there, this is something that works for sure  !</h2>
   <h3>Hello there, this is something that works for sure  !</h3>
 
-<<<<<<< HEAD
   <h4>Hello there, this is something that works for sure fefe3fefef  !</h4>
-=======
   <h4>Hello there, this is something that works for sure DRAGO !</h4>
->>>>>>> f2a62300c0a80d28fea8b18cf98c2784ba0a42fa
   `;
