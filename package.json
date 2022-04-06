@@ -10,5 +10,8 @@
   "devDependencies": {
     "sass": "^1.49.11",
     "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "ui-navigation-bar": "^1.1.1"
   }
 }
