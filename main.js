@@ -15,7 +15,7 @@ import { start } from "./fetching.js";
 //   document.body.appendChild(t);
 // });
 
-document.querySelector("#header").innerHTML = ` `;
+document.querySelector("#header").innerHTML = `<h1>This is a page to see if the data can be fetched or not!</h1> `;
 
 const h1 = document.querySelector("h1");
 
