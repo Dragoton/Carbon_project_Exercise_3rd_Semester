@@ -16,14 +16,21 @@
   <div id="header">
   </div>
   <div id="input">
-    <form action="[URL]" method="GET">
-      <label for="url">
+   
+    <form >
+      <label for="url_input">
         <span class="hint">Insert the URL here</span>
+        <span id="hint-url">This field needs at least an http:// sign at the beginning</span>
       </label>
-      <input id="url_link" type="text" name="url" required />
-      <button type="submit" aria-live="polite">Send</button>
+     
+     
+      <input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL" required />
+     
+      <button type="button" id="button" aria-live="polite">Send</button>
+     
+      <span class="error" id="err-url" aria-live="assertive">Type in a correct url link</span>
     </form>
-    <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it">
+    <!-- <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it"> -->
   </div>
   <img />
   <script type="module" src="/main.js"></script>

@@ -1,7 +1,16 @@
 "use strict";
 
-export function start() {
-  const url = `https://kea-alt-del.dk/websitecarbon/site/?url=https://dsb.dk`;
+let urlType = "";
+
+input.addEventListener("click", getVal);
+
+export function getVal() {
+  urlType = document.querySelector("input").value;
+  return urlType;
+}
+
+export function start(urlType) {
+  const url = `https://kea-alt-del.dk/websitecarbon/site/?url="${urlType}"`;
 
   console.log(url);
 
