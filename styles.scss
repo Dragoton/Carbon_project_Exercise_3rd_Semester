@@ -4,9 +4,61 @@ $primary-color: #2ba6cb;
 
 
 body {
+
+    #input {
+        display: grid;
+        gap: 1rem;
+    }
+
+    // input[type="text"]:valid {
+    //     color: green;
+
+    // }
+
+    // input[type="text"]:invalid {
+    //     color: red;
+
+    // }
+
     h1 {
         font-size: 3rem;
-        // font-family:$font-stack;
+    }
+
+
+    span {
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 5px;
+        display: grid;
+        gap: 5px;
+        font-family: $font-stack;
+    }
+
+
+    button {
+        color: #212121;
+        border: 1px solid #21212133;
+        background: rebeccapurple;
+        font-weight: 600;
+        color: #fff;
+        padding: 8px 12px 10px;
+        border-radius: 4px;
+    }
+
+    input {
+        -webkit-appearance: none;
+        appearance: none;
+        color: #212121;
+        border: 1px solid #21212133;
+        background: #f5f5f5;
+        padding: 8px 12px 10px;
+        border-radius: 4px;
+        outline: none;
+        caret-color: rebeccapurple;
+    }
+
+    input:focus {
+        border-color: rebeccapurple;
     }
 
     img {

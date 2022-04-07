@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <nav>
-      <a href="about.html">About</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="svgtest.html">SVG TEST</a>
   </nav>
-    <div id="header">
-    </div>
-    <div id="input">
-      <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it">
-    </div>
-    <img />
-    <script type="module" src="/main.js"></script>
-  </body>
+  <div id="header">
+  </div>
+  <div id="input">
+    <form action="[URL]" method="GET">
+      <label for="url">
+        <span class="hint">Insert the URL here</span>
+      </label>
+      <input id="url_link" type="text" name="url" required />
+      <button type="submit" aria-live="polite">Send</button>
+    </form>
+    <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it">
+  </div>
+  <img />
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
