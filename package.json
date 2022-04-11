@@ -12,6 +12,7 @@
     "vite": "^2.9.0"
   },
   "dependencies": {
+    "chart.js": "^3.7.1",
     "ui-navigation-bar": "^1.1.1"
   }
 }
