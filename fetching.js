@@ -1,24 +1,22 @@
 "use strict";
+import { displayLoading } from "./main.js";
 
 let urlType = "";
+const input = document.querySelector("#button");
 
-input.addEventListener("click", getVal);
+input.addEventListener("click", URLUser);
 
-export function getVal() {
+async function URLUser() {
   urlType = document.querySelector("input").value;
+  console.log(urlType);
+  generateSpeedresult(urlType);
   return urlType;
 }
 
-export function start(urlType) {
-  const url = `https://kea-alt-del.dk/websitecarbon/site/?url="${urlType}"`;
+function getVal(urlType) {
+  const url = `https://kea-alt-del.dk/websitecarbon/site/?url=${urlType}`;
 
   console.log(url);
-
-  // const options = {
-  //     headers: {
-  //         "x-apikey": "61b25dc172a03f5dae822248",
-  //     },
-  // };
 
   //fetch de data
   fetch(url)
@@ -30,9 +28,37 @@ export function start(urlType) {
     })
     .then((data) => {
       console.log(data);
-      //   handleData(data);
+      handleData(data);
     })
     .catch((e) => {
       console.error("An error occured:", e.message);
     });
+}
+
+async function generateSpeedresult(urlType) {
+  let pagespeedData;
+  displayLoading();
+  console.log(urlType);
+  const pagespeedUrl = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=URLHOLDER&key=AIzaSyC6HZGXOkPSk7mNaYyl4AO2e_PHLCJ3pFQ";
+  await fetch(pagespeedUrl.replace("URLHOLDER", urlType))
+    .then((data) => {
+      return data.json();
+    })
+
+    .then((data) => {
+      pagespeedData = data;
+
+      console.log(data);
+    });
+
+  getVal(urlType);
+}
+
+function handleData(green) {
+  document.querySelector("main").innerHTML = `<p>Is your site green? <span class="green"></span></p> `;
+  document.querySelector(".green").textContent = green.green;
+}
+
+export function start() {
+  console.log(url);
 }
