@@ -10,14 +10,6 @@ body {
         gap: 1rem;
     }
 
-    // input[type="text"]:valid {
-    //     border-color: green;
-    // }
-
-    // input[type="text"]:invalid {
-    //     border-color: red;
-    // }
-
     h1 {
         font-size: 3rem;
     }
@@ -80,7 +72,7 @@ body {
     }
 }
 
-
+// this is the logic of CSS to know is the link is the correct one or not 
 
 input:not(:focus, :placeholder-shown):invalid~.error {
     opacity: 1;
@@ -104,8 +96,7 @@ input:not(:focus, :placeholder-shown):invalid {
 input:valid:not(:placeholder-shown, :focus) {
     border: 2px solid green;
 }
-
-
+// this is the loadingscreen
 #loading {
     width: 2rem;
     height: 2rem;
@@ -116,10 +107,15 @@ input:valid:not(:placeholder-shown, :focus) {
     visibility: hidden;
     animation: spin 1s infinite linear;
 }
+
+
 #loading.display {
     visibility: visible;
     background-color: #f3f3f3;
 }
+
+
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -129,6 +125,7 @@ input:valid:not(:placeholder-shown, :focus) {
     }
 }
 
+// this is the for small text that is underneath when you don`t insert the correct link
 
 @keyframes shake {
     25% {
@@ -138,4 +135,19 @@ input:valid:not(:placeholder-shown, :focus) {
     75% {
         transform: translateX(6px);
     }
+}
+
+// this is for the charts 
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+}
+
+.chartPie {
+    width: 40vw;
 }

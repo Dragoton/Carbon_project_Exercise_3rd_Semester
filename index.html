@@ -16,31 +16,36 @@
   <div id="header">
   </div>
   <div id="input">
-   
-  
+
+
     <main>
-      
+
     </main>
-    <form >
+    <form>
       <label for="url_input">
         <span class="hint">Insert the URL here</span>
         <span id="hint-url">This field needs at least an http:// sign at the beginning</span>
       </label>
       <div id="loading"></div>
-     
-      <input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL" required />
-     
+
+      <input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL"
+        required />
+
       <button type="button" id="button" aria-live="polite">Send</button>
-     
+
       <span class="error" id="err-url" aria-live="assertive">Type in a correct url link</span>
     </form>
     <!-- <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it"> -->
   </div>
 
-  <div class="chart"><canvas id="myChart" ></canvas></div>
+  <div class="chart">
+    <div class="chartPie"><canvas id="myChart"></canvas></div>
+    <div class="chartPie"><canvas id="myChartBar"></canvas></div>
+  </div>
 
-  <img />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="module" src="/main.js"></script>
 </body>
 
