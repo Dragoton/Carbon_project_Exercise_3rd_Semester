@@ -3,3 +3,12 @@
   padding: 0px;
   list-style: none;
 }
+
+.testPhoto {
+  width: 90%;
+  display: inline-block
+}
+
+.testPhoto svg {
+width: 100%;
+}
