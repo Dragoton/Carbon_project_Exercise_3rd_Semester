@@ -1,7 +1,53 @@
+// Importat to use 
+
 $font-stack: Helvetica,
 sans-serif;
 $primary-color: #2ba6cb;
 
+@font-face {
+    font-family: "PlantinMTProBold";
+    src: url("/font/PlantinMTPro/PlantinMTProBold.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProBoldIt";
+    src: url("/font/PlantinMTPro/PlantinMTProBoldIt.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProCnBd";
+    src: url("/font/PlantinMTPro/PlantinMTProCnBd.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProLight";
+    src: url("/font/PlantinMTPro/PlantinMTProLight.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProLightIt";
+    src: url("/font/PlantinMTPro/PlantinMTProLightIt.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProRg";
+    src: url("/font/PlantinMTPro/PlantinMTProRg.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProRgIt";
+    src: url("/font/PlantinMTPro/PlantinMTProRgIt.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProSemiBdIt";
+    src: url("/font/PlantinMTPro/PlantinMTProSemiBdIt.TTF");
+}
+
+@font-face {
+    font-family: "PlantinMTProSmBd";
+    src: url("/font/PlantinMTPro/PlantinMTProSmBd.TTF");
+}
 
 body {
 
@@ -10,12 +56,12 @@ body {
         gap: 1rem;
     }
 
-    h1 {
-        font-size: 3rem;
-    }
 
     #hint-url {
-        color: grey;
+        font-family: "PlantinMTProRgIt";
+        font-size: clamp(0.88rem, calc(0.78rem + 0.49vw), 1.13rem);
+        text-align: center;
+        color: white;
     }
 
     span {
@@ -31,27 +77,31 @@ body {
     button {
         color: #212121;
         border: 1px solid #21212133;
-        background: rebeccapurple;
+        background: #0A5529;
         font-weight: 600;
         color: #fff;
-        padding: 8px 12px 10px;
-        border-radius: 4px;
+        margin-left: 0.5rem;
+        padding: 17px 12px 17px;
+        border-radius: 7px;
     }
 
     input {
         -webkit-appearance: none;
         appearance: none;
         color: #212121;
-        border: 1px solid #21212133;
-        background: #f5f5f5;
-        padding: 8px 12px 10px;
-        border-radius: 4px;
+        border: 1px solid #0A5529;
+        padding: 17px 78px 17px;
+        border-radius: 7px;
         outline: none;
         caret-color: rebeccapurple;
+        font-size: 14px;
+        position: relative;
+        font-family: "PlantinMTProRg";
+        text-align: center;
     }
 
     input:focus {
-        border-color: rebeccapurple;
+        border-color:  #0A5529;
     }
 
     img {
@@ -71,6 +121,46 @@ body {
         transition: .3s max-height;
     }
 }
+
+// this is the naviagtion 
+
+nav {
+    padding: 15px;
+    background-color: #ffc025;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 100%;
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0px;
+        justify-content: space-between;
+    }
+
+    li {
+        padding: 5px 10px;
+
+    }
+
+    li a {
+        color: white;
+        text-decoration: none;
+        font-family: "PlantinMTProRg";
+    }
+}
+
+
+
+
+
 
 // this is the logic of CSS to know is the link is the correct one or not 
 
@@ -94,8 +184,9 @@ input:not(:focus, :placeholder-shown):invalid {
 
 
 input:valid:not(:placeholder-shown, :focus) {
-    border: 2px solid green;
+    border: 2px solid #0D8D42;
 }
+
 // this is the loadingscreen
 #loading {
     width: 2rem;
@@ -120,6 +211,7 @@ input:valid:not(:placeholder-shown, :focus) {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -136,6 +228,48 @@ input:valid:not(:placeholder-shown, :focus) {
         transform: translateX(6px);
     }
 }
+
+
+// this is the form
+
+form {
+    
+    background-color: #ffc025;
+    
+        .header_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin:2rem;
+        }
+    
+        .header_text h1 {
+            font-size: clamp(1.88rem, calc(1.27rem + 3.05vw), 3.44rem);
+            font-family: "PlantinMTProRg";
+            color: white;
+            padding: 0rem;
+            margin: 0rem;
+        }
+    
+        .header_text p {
+            width: 65%;
+            font-size: clamp(1.13rem, calc(0.83rem + 1.46vw), 1.88rem);
+            text-align: center;
+            font-family: "PlantinMTProRg";
+            color: white;
+            margin-bottom: 0rem;
+        }
+
+        .input {
+            margin: 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+
 
 // this is for the charts 
 

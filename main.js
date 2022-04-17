@@ -10,7 +10,7 @@ const fakeImg = ["img-for-try-out", "img-for-try-out"];
 import { start } from "./fetching.js";
 import { MyChart } from "./charts.js";
 
-document.querySelector("#header").innerHTML = `<h1>This is a page to see if the data can be fetched or not!</h1> `;
+// document.querySelector("#header").innerHTML = `<h1>This is a page to see if the data can be fetched or not!</h1> `;
 
 const h1 = document.querySelector("h1");
 
@@ -25,7 +25,7 @@ export function displayLoading() {
   setTimeout(() => {
     loader.classList.remove("display");
     MyChart();
-  }, 1000);
+  }, 21000);
 }
 
 // fakeImg.forEach((el) => {

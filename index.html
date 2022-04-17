@@ -9,34 +9,50 @@
 </head>
 
 <body>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="svgtest.html">SVG TEST</a>
-  </nav>
   <div id="header">
   </div>
-  <div id="input">
 
 
-    <main>
 
-    </main>
-    <form>
-      <label for="url_input">
-        <span class="hint">Insert the URL here</span>
-        <span id="hint-url">This field needs at least an http:// sign at the beginning</span>
-      </label>
-      <div id="loading"></div>
+  <main>
 
-      <input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL"
-        required />
+  </main>
+  <nav>
+    <!-- Menu component layout -->
+    <a href="index.html"><object data="my.svg" type="image/svg+xml">
+        <img src="/navigation/logo_white.svg" class="logo" />
+      </object> </a>
+    <ul class="ul">
+      <li><a href="#advantages">About</a></li>
+      <li><a href="#product">Contat</a></li>
+    </ul>
+  </nav>
 
+
+
+  <form class="url_input">
+    <dev class="header_text">
+      <h1> Lorem ipsum dolor </h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt</p>
+    </dev>
+
+
+    <label for="url_input">
+      <!-- <span class="hint">Insert the URL here</span> -->
+      <span id="hint-url" class="hint-url">This field needs at least an http:// sign at the beginning</span>
+    </label>
+    <div class="input">
+      <div><input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL"
+          required />
+        <span class="error" id="err-url" aria-live="assertive">Type in a correct url link</span>
+      </div>
       <button type="button" id="button" aria-live="polite">Send</button>
+    </div>
+    <div id="loading"></div>
 
-      <span class="error" id="err-url" aria-live="assertive">Type in a correct url link</span>
-    </form>
-    <!-- <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it"> -->
-  </div>
+  </form>
+  <!-- <img src="/greenhouse.jpg" alt="this is a image with a greenhouse in it"> -->
+
 
   <div class="chart">
     <div class="chartPie"><canvas id="myChart"></canvas></div>
