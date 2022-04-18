@@ -478,7 +478,7 @@ form {
 //data for project 
 #data_for_project {
     width: 100%;
-    height: 200vh;
+    // height: 200vh;
     background-color: #F8F1EB;
     font-family: "PlantinMTProRg";
 
@@ -524,6 +524,7 @@ form {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         margin: 1rem;
     }
 
@@ -657,9 +658,10 @@ footer {
 
     .SoMe_icons_and_Privicy ul {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         margin-left: 1rem;
     }
+
     .SoMe_icons_and_Privicy ul li {
         margin: 1rem;
     }
@@ -668,4 +670,69 @@ footer {
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    #data_for_project {
+        width: 100%;
+
+        .about_the_project_dev {
+            margin: 0rem;
+        }
+
+        .data_for_project article {
+            // flex-direction: column;
+            display: grid;
+            width: 100%;
+            margin: 1rem;
+            margin-left: 0rem;
+        }
+
+        .about_the_project_p_container_up {
+            width: 100%;
+            margin: 0rem;
+        }
+
+        .about_the_project_p_container_up p {
+            width: 100%;
+        }
+
+        .about_the_project_p_container_up h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .about_the_project_p_container_banner {
+            flex-direction: column;
+        }
+         
+        .data_for_project_big_banner {
+            display: grid;
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+footer { 
+    margin-top:auto; 
+
+    .main_section {
+        flex-direction: column;
+        align-items: center;
+        justify-content:left;
+        margin-bottom: 1rem;
+    }
+
+    .main_section div {
+        margin-bottom: 1rem;
+    }
+
+}
+
+.SoMe_icons_and_Privicy {
+    flex-direction: column;
+}
 }
