@@ -314,13 +314,13 @@ form {
         align-items: center;
         // border: 1px solid white;
         margin: 1rem;
-        font-size: clamp(0.75rem, calc(-0.30rem + 5.24vw), 3.44rem);
+        font-size: clamp(1.88rem, calc(1.39rem + 2.44vw), 3.13rem);
     }
 
     .section_with_numbers_container h3 {
         width: 50%;
         text-align: center;
-        font-size: clamp(0.63rem, calc(0.43rem + 0.98vw), 1.13rem);
+        font-size: 1.13rem;
         font-family: Arial;
         font-weight: 400;
         margin: 0rem;
@@ -465,7 +465,7 @@ form {
         width: 60%;
         text-align: center;
         font-family: "PlantinMTProRg";
-        font-size: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+        font-size: clamp(0.88rem, calc(0.73rem + 0.73vw), 1.25rem);
     }
 
     .button_for_more_green {
@@ -674,11 +674,42 @@ footer {
     display: none;
 }
 
+@media screen and (max-width: 1680px) { 
+
+    .backgroundimage {
+        height: 44vh;
+    }
+    
+    footer {
+        .Contact {
+            margin-left: 6rem;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1280px) {
 
+    .backgroundimage {
+        height: 44vh;
+    }
+
     #section_with_numbers {
+     
+
         .section_with_numbers_containers {
-            width: 90%;
+            width: 100%;
+            flex-direction: row;
+            padding-top: 0rem;
+        }
+
+        #for_border {
+            width: 100%;
+            text-align: center;
+            border: 0px solid #21212133;
+            padding-left: 0rem;
+            padding-right: 0rem;
+            margin: 0rem;
         }
     }
 
@@ -734,15 +765,29 @@ footer {
         }
     }
 
+
+    footer {
+        .Contact {
+            margin-left: 3rem;
+        }
+    }
+
 }
 
 @media screen and (max-width: 780px) {
     #section_with_numbers {
+    
+
+
         .section_with_numbers_containers {
-            width: 70%;
+            width: 100%;
+            flex-direction: column;
+            padding-top: 0rem;
         }
     }
- 
+
+
+
 
     #data_for_project {
         .data_for_project_big_banner {
@@ -770,19 +815,67 @@ footer {
         margin-top: auto;
 
         .main_section {
-            flex-direction: column;
-            align-items: center;
-            justify-content: left;
-            margin-bottom: 1rem;
+            width: 100%;
+            display: grid;
+            // margin-bottom: 1rem;
         }
 
         .main_section div {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            // flex-direction: row;
+            // text-align: center;
         }
 
+        .main_section div h3{
+             font-size: 1.65rem;
+        }
+
+        .main_section div ul li a  {
+            font-size: 1.15rem;
+        }
+
+        #footer_logo {
+            margin-top: 2rem;
+        }
+
+        .Contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0rem;
+        }
+    
+        .Contact h4 {
+        font-size: 2.15rem;
+        }
+    
+        .SoMe_icons_and_Privicy {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .SoMe_icons_and_Privicy ul {
+            display: flex;
+            flex-direction: row;
+            margin-left: 1rem;
+        }
+
+        .SoMe_icons_and_Privicy div p {
+            margin: 1rem;
+            font-size: 1.05rem;
+        }
+    
+        .SoMe_icons_and_Privicy ul li {
+            margin: 1rem;
+            font-size: 1.15rem;
+        }
+    
+    
     }
 
-    .SoMe_icons_and_Privicy {
-        flex-direction: column;
-    }
+    
 }
