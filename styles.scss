@@ -239,6 +239,8 @@ input:valid:not(:placeholder-shown, :focus) {
 
 form {
 
+    margin-top: 5.5rem;
+
     // background-color: #ffc025;
 
     .header_text {
@@ -343,7 +345,7 @@ form {
 
 .backgroundimage {
     width: 100%;
-    height: 54vh;
+    height: 48vh;
     z-index: -1;
 }
 
@@ -383,7 +385,7 @@ form {
     }
 
     #text_Chart {
-       
+
         text-align: end;
         justify-content: center;
     }
@@ -475,7 +477,7 @@ form {
     width: 100%;
     height: 200vh;
     background-color: #F8F1EB;
-    font-family:"PlantinMTProRg" ;
+    font-family: "PlantinMTProRg";
 
     .about_the_project {
         display: flex;
@@ -588,5 +590,74 @@ form {
 
     .about_the_project_p_container_banner img {
         margin: 2rem;
+    }
+}
+
+
+//this is for footer
+footer {
+    background-color: #0E6834;
+    padding: 0rem;
+    margin: 0rem;
+
+    .main_section {
+        width: 100%;
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "PlantinMTProRg";
+    }
+
+    h3 {
+        color: #75CA99;
+        font-size: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+    }
+
+    li {
+        list-style-type: none;
+        text-align: left;
+        margin-top: 0.3rem;
+    }
+
+    ul {
+        margin: 0rem;
+        padding: 0rem;
+    }
+
+    li a {
+        color: white;
+        text-decoration: none;
+        font-size: clamp(0.88rem, calc(0.78rem + 0.49vw), 1.13rem);
+    }
+
+    .Contact {
+        width: 100%;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    .Contact h4 {
+        color: white;
+        font-size: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+    }
+
+    .SoMe_icons_and_Privicy {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        font-family: "PlantinMTProRg";
+    }
+
+    .SoMe_icons_and_Privicy ul {
+        display: flex;
+        flex-direction: row; 
+        margin-left: 1rem;
+    }
+    .SoMe_icons_and_Privicy ul li {
+        margin: 1rem;
     }
 }
