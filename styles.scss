@@ -51,6 +51,9 @@ $primary-color: #2ba6cb;
 
 body {
 
+    padding: 0rem;
+    margin: 0rem;
+    
     #input {
         display: grid;
         gap: 1rem;
@@ -272,23 +275,6 @@ form {
 }
 
 
-
-// this is for the charts 
-
-.chart {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100vw;
-}
-
-.chartPie {
-    width: 40vw;
-}
-
-
 //section with numbers 
 
 #section_with_numbers {
@@ -296,7 +282,12 @@ form {
     height: 100vh;
     font-family: "PlantinMTProRg";
     color: white;
-    background: linear-gradient(180deg, #40AF3C 0%, #08351B 96.87%);
+    background: linear-gradient(180deg, #338c39 0%, #08351B 96.87%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    margin: 0rem;
 
     h3 {
         font-size: clamp(0.81rem, calc(0.69rem + 0.61vw), 1.13rem);
@@ -306,9 +297,9 @@ form {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
-        padding-top: 10rem;       
+        padding-top: 10rem;
     }
 
     .section_with_numbers_container {
@@ -344,31 +335,91 @@ form {
     width: 100%;
     height: 100vh;
     z-index: -1;
-    // position: absolute;
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-fit: cover;
 }
 
-// .container_header {
-//     width: 100%;
-// }
+.backgroundimage {
+    width: 100%;
+    height: 54vh;
+    z-index: -1;
+}
 
-// .svg {
-//     width: 100%;
-//     height: 100vh;
-// }
+
 
 
 //your score
 #your_score {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background: linear-gradient(180deg, #08351B 0%, #000000 100%);
     color: white;
 
     h2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(1.63rem, calc(0.92rem + 3.54vw), 3.44rem);
         padding: 0rem;
         margin: 0rem;
+        flex-wrap: wrap;
+    }
+
+    .your_score_continer {
+        display: flex;
+        min-height: 90vh;
+        max-width: 100%;
+        padding: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        margin: 5rem;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #text_Chart {
+       
+        text-align: end;
+        justify-content: center;
+    }
+
+    .your_score_pie {
+        width: 100%;
     }
 }
+
+// this is for the charts 
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+}
+
+.chartPie {
+    width: 28vw;
+}
+
+.your_score-text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+}
+
+// #myChartBar {
+//     width: 30vw;
+// }
+
 
 
 // make more green
@@ -429,11 +480,11 @@ form {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
     }
 
     .about_the_project_dev {
-        border: 2px solid green; 
+        border: 2px solid green;
         margin: 8rem;
         padding: 3rem;
         border-radius: 50px;
@@ -444,7 +495,7 @@ form {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+
     }
 
     .about_the_project_p {
@@ -452,15 +503,15 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    .about_the_project_p_container p{
+    .about_the_project_p_container p {
         width: 80%;
         text-align: center;
         font-size: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
     }
-    
+
 
     .data_for_project {
         display: flex;

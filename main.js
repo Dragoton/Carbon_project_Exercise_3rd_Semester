@@ -25,7 +25,7 @@ export function displayLoading() {
   setTimeout(() => {
     loader.classList.remove("display");
     MyChart();
-  }, 21000);
+  }, 1000);
 }
 
 // fakeImg.forEach((el) => {
