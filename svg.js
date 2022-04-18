@@ -11,7 +11,6 @@ gsap.to("#cloud1", {
   duration: 1,
 });
 
-/*
 gsap.to("#cloud2", { x: 1000 }, 0);
 gsap.to("#cloud3", { x: -1000 }, 0);
 gsap.to("#cloud4", { x: -700, y: 25 }, 0);
@@ -30,7 +29,6 @@ tl.from(".profilepic", {
   x: 60,
   ease: "power2.out",
 });
-
 
 gsap.to("#middle", {
   opacity: 0,
@@ -51,4 +49,4 @@ gsap.to(".n", {
   duration: 1,
   ease: "power2.out",
   delay: 8,
-});*/
+});
