@@ -289,10 +289,23 @@ form {
     color: white;
     background: linear-gradient(180deg, #338c39 0%, #08351B 96.87%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0rem;
     margin: 0rem;
+
+    .is_website_green_container h2 {
+        margin-bottom: 1rem;
+    font-size: 3rem;
+    }
+
+    .is_website_green_container .is_website_green span {
+        text-align: center;
+        font-size: 1.5rem;
+        color: white;
+        font-family: "PlantinMTProRg";
+    }
 
     h3 {
         font-size: clamp(0.81rem, calc(0.69rem + 0.61vw), 1.13rem);

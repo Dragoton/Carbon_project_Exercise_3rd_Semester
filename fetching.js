@@ -1,4 +1,6 @@
 "use strict";
+
+// window.addEventListener("DOMContentLoaded", start);
 import { displayLoading } from "./main.js";
 
 let urlType = "";
@@ -55,7 +57,7 @@ async function generateSpeedresult(urlType) {
 }
 
 function handleData(green) {
-  document.querySelector("main").innerHTML = `<p>Is your site green? <span class="green"></span></p> `;
+  document.querySelector("#section_with_numbers .is_website_green").innerHTML = `<span class="green"></span> `;
   document.querySelector(".green").textContent = green.green;
 }
 
