@@ -4,6 +4,9 @@ $font-stack: Helvetica,
 sans-serif;
 $primary-color: #2ba6cb;
 
+
+
+
 @font-face {
     font-family: "PlantinMTProBold";
     src: url("/font/PlantinMTPro/PlantinMTProBold.TTF");
@@ -660,4 +663,9 @@ footer {
     .SoMe_icons_and_Privicy ul li {
         margin: 1rem;
     }
+}
+
+
+.hidden {
+    display: none;
 }
