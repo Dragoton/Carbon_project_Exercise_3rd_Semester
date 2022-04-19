@@ -7,7 +7,6 @@ module.exports = {
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
-        illustration: resolve(__dirname, "svgtest.html"),
       },
     },
   },
