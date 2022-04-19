@@ -37,10 +37,10 @@
 
     <label for="url_input">
       <!-- <span class="hint">Insert the URL here</span> -->
-      <span id="hint-url" class="hint-url">This field needs at least an http:// sign at the beginning</span>
+      <!-- <span id="hint-url" class="hint-url">This field needs at least an http:// sign at the beginning</span> -->
     </label>
     <div class="input">
-      <div><input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Type in the URL"
+      <div><input id="url_link" type="url" name="url" autocomplete="url" spellcheck="true" placeholder="Link starts with http://"
           required />
         <span class="error" id="err-url" aria-live="assertive">Type in a correct url link</span>
       </div>
@@ -50,13 +50,10 @@
 
 
   </form>
-  <div class="backgroundimage"><img src="/Image_background/backgroundimage.jpg" alt="" id="header"></div>
+  <div class="backgroundimage"><img src="/Image_background/background_image.jpg" alt="" id="header"></div>
 
-  <!-- 
-  <div class="chart">
-    <div class="chartPie"><canvas id="myChart"></canvas></div>
-    <div class="chartPie"><canvas id="myChartBar"></canvas></div>
-  </div> -->
+  
+
 
 
   <section id="section_with_numbers">
@@ -86,28 +83,29 @@
   </section>
 
 
-  <section id="your_score" class="hidden">
+  <section id="your_score">
 
     <h2>Let's check your score</h2>
 
     <article class="your_score_continer">
-      <section>
+      <section class="your_scores">
         <div class="your_score-text"> Congratulations, your website is greener than X% of the sites tested. The site
           uses X energy, emits X gr of CO2 and mainly uses renewable energy.
         </div>
       </section>
-      <section>
-        <div class="chartPie"><canvas id="myChart"></canvas></div>
+      <section class="your_pie">
+        <img src="/Image_background/Pie_Blue.svg" viewBox="0 0 100 100" alt="">
+        <!-- <div class="chartPie"><canvas id="myChart"></canvas></div> -->
       </section>
     </article>
 
-    <article class="your_score_continer">
-      <section>
-        <div class="chartPie"><canvas id="myChartBar"></canvas></div>
+    <article class="your_score_continer" id="your_score_continer_v2">
+      <section class="your_chart" id="chart_v2">
+      <img src="/Image_background/chart.svg" viewBox="0 0 100 100" alt="">
+        <!-- <div class="chartPie"><canvas id="myChartBar"></canvas></div> -->
       </section>
-      <section id="text_Chart">
-        <div class="your_score-text"> A more detailed report is available for professionals involved in the development
-          of green websites. </div>
+      <section id="text_Chart" class="text_chart_v2">
+        <div class="your_score-text"> A more detailed report is available for professionals involved in the development of green websites. <br>Download report HERE. </div>
       </section>
     </article>
 
