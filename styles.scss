@@ -196,10 +196,10 @@ input:valid:not(:placeholder-shown, :focus) {
 
 // this is the loadingscreen
 #loading {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border: 5px solid #f3f3f3;
-    border-top: 6px solid #9c41f2;
+    border-top: 8px solid #0a7135;
     border-radius: 100%;
     margin: auto;
     visibility: hidden;
@@ -209,7 +209,21 @@ input:valid:not(:placeholder-shown, :focus) {
 
 #loading.display {
     visibility: visible;
-    background-color: #f3f3f3;
+    background-color: white;
+}
+
+.loading_background {
+    z-index: 9999;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://loremflickr.com/320/240');
+}
+
+.loading_screen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 
@@ -438,6 +452,14 @@ form {
 }
 
 .your_score-text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+}
+
+.your_score-text_v2 {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -724,11 +746,17 @@ footer {
         .your_scores {
             width: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
         .your_score-text {
+            width: 50%;
+            // text-align: center;
+        }
+
+        .your_score-text_v2 {
             width: 50%;
             // text-align: center;
         }
@@ -865,6 +893,11 @@ footer {
             width: 100%;
             font-size: 1.3rem;
             text-align: left;
+        }
+
+        .your_score-text_v2 {
+            width: 100%;
+            // text-align: center;
         }
 
         .your_pie img {

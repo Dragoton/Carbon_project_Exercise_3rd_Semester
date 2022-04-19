@@ -17,15 +17,21 @@ const h1 = document.querySelector("h1");
 h1.addEventListener("click", start);
 
 const loader = document.querySelector("#loading");
+const results = document.querySelector("#your_score");
+const header = document.querySelector("#header");
 
 // showing loading
 export function displayLoading() {
   loader.classList.add("display");
+  loader.classList.add("loading_screen");
+  header.classList.add("loading_background");
   // to stop loading after some time
   setTimeout(() => {
     loader.classList.remove("display");
+    results.classList.remove("hidden");
+
     MyChart();
-  }, 1000);
+  }, 21000);
 }
 
 // fakeImg.forEach((el) => {

@@ -49,7 +49,7 @@ async function generateSpeedresult(urlType) {
 
     .then((data) => {
       pagespeedData = data;
-
+      handleLightHouseData(data);
       console.log(data);
     });
 
@@ -57,8 +57,26 @@ async function generateSpeedresult(urlType) {
 }
 
 function handleData(green) {
-  document.querySelector("#section_with_numbers .is_website_green").innerHTML = `<span class="green"></span> `;
-  document.querySelector(".green").textContent = green.green;
+  // document.querySelector(".green").textContent = green.green;
+  let greenData;
+  let greenScale;
+  if (green.green === true) {
+    greenData = "Yes";
+  } else {
+    greenData = "No";
+  }
+  document.querySelector("#section_with_numbers .is_website_green").innerHTML = `<span >${greenData}</span> `;
+  console.log(greenData);
+  greenScale = green.cleanerThan * 100;
+  console.log(greenScale);
+  document.querySelector(".your_scores .your_score-text").innerHTML = `<p>Congratulations, your website is greener than ${greenScale}% of the sites tested.</p>`;
+}
+
+function handleLightHouseData(timing) {
+  console.log(timing.lighthouseResult.timing.total);
+  document.querySelector(".your_scores .your_score-text_v2").innerHTML = `<p>The total timing to fetch was ${timing.lighthouseResult.timing.total}ms. The LightHouse score is: ${timing.lighthouseResult.categories.performance.score}. The site
+  has the envioronment benchark of ${timing.lighthouseResult.environment.benchmarkIndex}.</p>`;
+  document.querySelector(".text_chart_v2 .your_score-text").innerHTML = `A more detailed report is available for professionals involved in the development of green websites. <br>Download report HERE.`;
 }
 
 export function start() {
